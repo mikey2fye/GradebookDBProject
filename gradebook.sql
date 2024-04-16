@@ -41,15 +41,24 @@ INSERT INTO Courses (department, course_id, course_number, course_name, semester
 ('Computer Science' , '17814', 'CSCI454', 'Intro to Cyber Security II', 'Spring', '2024');
 
 INSERT INTO Assignments (course_id, category, weight, assignment_name) VALUES
-(14216, 'Attendance', 0.05, 'Class Attendance'),
-(14216, 'Homework', 0.30, 'Homework 1'),
-(14216, 'Tests', 0.45, 'Midterm Exam'),
-(14216, 'Quizzes', 0.20, 'Quiz 1'),
-(14150, 'Homework', 0.30, 'Assignment 1'),
-(14150, 'Tests', 0.70, 'Midterm Exam'),
-(17814, 'Tests', 0.65, 'Midterm'),
-(17814, 'Quizzes', 0.30, 'Quiz 1'),
-(17814, 'Participation', 0.05, 'Class Participation');
+(14216, 'Attendance', 5, 'Class Attendance'),
+(14216, 'Homework', 10, 'Homework 1'),
+(14216, 'Homework', 10, 'Homework 2'),
+(14216, 'Homework', 10, 'Homework 3'),
+(14216, 'Tests', 45, 'Midterm Exam'),
+(14216, 'Quizzes', 10, 'Quiz 1'),
+(14216, 'Quizzes', 10, 'Quiz 2'),
+(14150, 'Homework', 10, 'Homework 1'),
+(14150, 'Homework', 10, 'Homework 2'),
+(14150, 'Homework', 10, 'Homework 3'),
+(14150, 'Tests', 30, 'Midterm Exam'),
+(14150, 'Tests', 30, 'Final Exam'),
+(17814, 'Tests', 40, 'Midterm'),
+(17814, 'Quizzes', 10, 'Quiz 1'),
+(17814, 'Quizzes', 10, 'Quiz 2'),
+(17814, 'Quizzes', 10, 'Quiz 3'),
+(17814, 'Participation', 5, 'Class Participation'),
+(17814, 'Tests', 65, 'Final');
 
 INSERT INTO Students (student_id, first_name, last_name) VALUES
 (03034572, 'John', 'Doe'),
