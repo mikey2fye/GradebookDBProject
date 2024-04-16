@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS Courses (
+CREATE TABLE Courses (
     course_id INT,
     department VARCHAR(50),
     course_number VARCHAR(10),
@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS Courses (
     course_id SERIAL PRIMARY KEY
 );
 
-CREATE TABLE IF NOT EXISTS Assignments (
+CREATE TABLE Assignments (
     assignment_id INT,
     course_id INT(5),
     category VARCHAR(50),
@@ -18,36 +18,38 @@ CREATE TABLE IF NOT EXISTS Assignments (
     assignment_id SERIAL PRIMARY KEY
 );
 
-CREATE TABLE IF NOT EXISTS Students (
+CREATE TABLE Students (
     student_id INT,
     first_name VARCHAR(50),
     last_name VARCHAR(50),
     student_id SERIAL PRIMARY KEY
 );
 
-CREATE TABLE IF NOT EXISTS Grades (
-    grade_id SERIAL PRIMARY KEY,
+CREATE TABLE Grades (
+    grade_id INT,
     student_id INT,
     assignment_id INT,
     score DECIMAL(5, 2),
     FOREIGN KEY (student_id) REFERENCES Students(student_id),
-    FOREIGN KEY (assignment_id) REFERENCES Assignments(assignment_id)
+    FOREIGN KEY (assignment_id) REFERENCES Assignments(assignment_id),
+    grade_id SERIAL PRIMARY KEY
 );
 
 INSERT INTO Courses (department, course_id, course_number, course_name, semester, year) VALUES
 ('Computer Science', '14216', 'CSCI350', 'Structure of Program Language', 'Spring', '2024'),
 ('Computer Science', '14150', 'CSCI432', 'Database Systems', 'Spring', '2024'),	
-('Computer Science' , '17814', 'CSCI454', 'Intro to Cyber Security II', 'Spring', '2024'),	
-('Computer Science', 18107, 'CSCI482', 'Natural Language Processing', 'Spring', '2024'),	
-('Computer Science', '13778', 'EGPP493', 'Bison Startup', 'Spring', '2024');
+('Computer Science' , '17814', 'CSCI454', 'Intro to Cyber Security II', 'Spring', '2024');
 
 INSERT INTO Assignments (course_id, category, weight, assignment_name) VALUES
-(18107, 'Attendance', 10, 'Class Attendance'),
-(18107, 'Homework', 20, 'Homework 1'),
-(18107, 'Tests', 50, 'Midterm Exam'),
-(18107, 'Projects', 20, 'Group Project'),
-(2, 'Homework', 30, 'Assignment 1'),
-(2, 'Tests', 70, 'Midterm Exam');
+(14216, 'Attendance', 0.05, 'Class Attendance'),
+(14216, 'Homework', 0.30, 'Homework 1'),
+(14216, 'Tests', 0.45, 'Midterm Exam'),
+(14216, 'Quizzes', 0.20, 'Quiz 1'),
+(14150, 'Homework', 0.30, 'Assignment 1'),
+(14150, 'Tests', 0.70, 'Midterm Exam'),
+(17814, 'Tests', 0.65, 'Midterm'),
+(17814, 'Quizzes', 0.30, 'Quiz 1'),
+(17814, 'Participation', 0.05, 'Class Participation');
 
 INSERT INTO Students (student_id, first_name, last_name) VALUES
 (03034572, 'John', 'Doe'),
@@ -61,8 +63,8 @@ INSERT INTO Students (student_id, first_name, last_name) VALUES
 (03057602, 'Edward', 'Reese'),
 (03032573, 'Evan', 'Ibhawoa');
 
-INSERT INTO Grades (student_id, assignment_id, score) VALUES
-(1, 1, 8.5),
+INSERT INTO Grades (student_id, course_id, assignment_id, score) VALUES
+(1, 1, 85),
 (1, 2, 85),
 (1, 3, 92),
 (1, 4, 88),
