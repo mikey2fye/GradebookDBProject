@@ -1,3 +1,8 @@
+DROP TABLE Courses;
+DROP TABLE Assignments;
+DROP TABLE Students;
+DROP TABLE Grades; 
+
 CREATE TABLE Courses (
     department VARCHAR(50),
     course_id INT,
@@ -60,7 +65,7 @@ INSERT INTO Students (student_id, first_name, last_name) VALUES
 ('@03034572', 'John', 'Doe'),
 ('@03032583', 'Bernell', 'Deamon'),
 ('@03032679', 'Jane', 'Smith'),
-('@03062173', 'Jichael', 'Mohnson'),
+('@03064576', 'Jichael', 'Mohnson'),
 ('@03024769', 'Davion', 'Mitchell'),
 ('@03018590', 'Ava', 'Phillips'),
 ('@03013847', 'Noah', 'Kelly'),
@@ -72,7 +77,15 @@ INSERT INTO Grades (student_id, course_id, assignment_name, score) VALUES
 ('@03034572', 14216, 'Homework 1', 90),
 ('@03032583', 14216, 'Homework 1', 100),
 ('@03032679', 14216, 'Homework 1', 88),
-('@03034576', 17814, 'Homework 1', 62),
+('@03064576', 14216, 'Homework 1', 62),
+('@03034572', 14216, 'Homework 2', 100),
+('@03032583', 14216, 'Homework 2', 80),
+('@03032679', 14216, 'Homework 2', 65),
+('@03034576', 14216, 'Homework 2', 82),
+('@03034572', 14216, 'Quiz 1', 100),
+('@03032583', 14216, 'Quiz 1', 70),
+('@03032583', 14216, 'Quiz 1', 40),
+('@03032583', 14216, 'Quiz 1', 80),
 ('@03032679', 14150, 'Midterm Exam', 70),
 ('@03062173', 14150, 'Midterm Exam', 70),
 ('@03024769', 14150, 'Midterm Exam', 77),
@@ -86,10 +99,10 @@ INSERT INTO Grades (student_id, course_id, assignment_name, score) VALUES
 ('@03034572', 17814, 'Quiz 1', 80),
 ('@03013847', 14150, 'Quiz 1', 100);
 
-DESCRIBE Courses;
-DESCRIBE Assignments;
-DESCRIBE Students;
-DESCRIBE Grades;
+-- DESCRIBE Courses;
+-- DESCRIBE Assignments;
+-- DESCRIBE Students;
+-- DESCRIBE Grades;
 
 SELECT * FROM Courses;
 SELECT * FROM Assignments;
