@@ -1,8 +1,3 @@
-DROP TABLE Courses;
-DROP TABLE Assignments;
-DROP TABLE Students;
-DROP TABLE Grades; 
-
 CREATE TABLE Courses (
     department VARCHAR(50),
     course_id INT,
