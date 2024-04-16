@@ -66,12 +66,12 @@ INSERT INTO Students (student_id, first_name, last_name) VALUES
 ('@03032583', 'Bernell', 'Deamon'),
 ('@03032679', 'Jane', 'Smith'),
 ('@03064576', 'Jichael', 'Mohnson'),
-('@03024769', 'Davion', 'Mitchell'),
+('@03024769', 'Qavion', 'Mitchell'),
 ('@03018590', 'Ava', 'Phillips'),
 ('@03013847', 'Noah', 'Kelly'),
-('@03056739', 'Kendrick', 'Carter'),
+('@03056739', 'Kendra', 'Carter'),
 ('@03057602', 'Edward', 'Reese'),
-('@03032571', 'Evan', 'Ibhawoa');
+('@03032571', 'Eva', 'Quawoa');
 
 INSERT INTO Grades (student_id, course_id, assignment_name, score) VALUES
 ('@03034572', 14216, 'Homework 1', 90),
