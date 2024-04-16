@@ -1,4 +1,4 @@
-DROP PROCEDURE IF EXISTS AddPointsToAssignmentScores;
+DROP PROCEDURE IF EXISTS AddPointsToAssignmentScoresInCourse;
 
 DELIMITER //
 
