@@ -32,19 +32,23 @@ CREATE TABLE Grades (
 );
 
 INSERT INTO Courses (department, course_number, course_name, semester, year) VALUES
-('Computer Science', 'CS101', 'Introduction to Computer Science', 'Fall', 2023),
-('Mathematics', 'MATH201', 'Calculus I', 'Fall', 2023);
+('Computer Science', 'CSCI350', 'Structure of Program Language', 'Spring', '2024'),
+('Computer Science', 'CSCI432', 'Database Systems', 'Spring', '2024'),	
+('Computer Science' , 'CSCI454', 'Intro to Cyber Security II', 'Spring', '2024'),	
+('Computer Science', 'CSCI482', 'Natural Language Processing', 'Spring', '2024'),	
+('Computer Science', 'EGPP493',	'Bison Startup', 'Spring', '2024');
 
 INSERT INTO Assignments (course_id, category, weight, assignment_name) VALUES
-(1, 'Participation', 10, 'Class Participation'),
-(1, 'Homework', 20, 'Homework 1'),
-(1, 'Tests', 50, 'Midterm Exam'),
-(1, 'Projects', 20, 'Group Project'),
+(18107, 'Attendance', 10, 'Class Attendance'),
+(18107, 'Homework', 20, 'Homework 1'),
+(18107, 'Tests', 50, 'Midterm Exam'),
+(18107, 'Projects', 20, 'Group Project'),
 (2, 'Homework', 30, 'Assignment 1'),
 (2, 'Tests', 70, 'Midterm Exam');
 
 INSERT INTO Students (first_name, last_name) VALUES
 ('John', 'Doe'),
+('Pernell', 'Leamon'),
 ('Jane', 'Smith'),
 ('Michael', 'Johnson');
 
