@@ -54,6 +54,11 @@ INSERT INTO Students (student_id, first_name, last_name) VALUES
 (03032573, 'Bernell', 'Deamon'),
 (03052583, 'Jane', 'Smith'),
 (03062173, 'Jichael', 'Mohnson'),
+(03024769, 'Davion', 'Mitchell'),
+(03018590, 'Ava', 'Phillips'),
+(03013847, 'Noah', 'Kelly'),
+(03056739, 'Kendrick', 'Carter'),
+(03057602, 'Edward', 'Reese'),
 (03032573, 'Evan', 'Ibhawoa');
 
 INSERT INTO Grades (student_id, assignment_id, score) VALUES
