@@ -38,4 +38,4 @@ END //
 
 DELIMITER ;
 
-CALL ComputeAssignmentStats('Quiz 1',17814);
+CALL ComputeAssignmentStats('Quiz 1', 14216);
