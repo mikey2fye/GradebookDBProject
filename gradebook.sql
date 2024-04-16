@@ -1,3 +1,8 @@
+DROP TABLE Courses;
+DROP TABLE Assignments;
+DROP TABLE Students;
+DROP TABLE Grades; 
+
 CREATE TABLE Courses (
     department VARCHAR(50),
     course_id INT,
@@ -16,14 +21,14 @@ CREATE TABLE Assignments (
 );
 
 CREATE TABLE Students (
-    student_id INT,
+    student_id VARCHAR(50),
     first_name VARCHAR(50),
     last_name VARCHAR(50)
     -- student_id SERIAL PRIMARY KEY
 );
 
 CREATE TABLE Grades (
-    student_id INT,
+    student_id VARCHAR(50),
     course_id INT,
     assignment_name VARCHAR(50),
     score DECIMAL(5, 2)
@@ -57,36 +62,41 @@ INSERT INTO Assignments (course_id, category, weight, assignment_name) VALUES
 (17814, 'Tests', 65, 'Final');
 
 INSERT INTO Students (student_id, first_name, last_name) VALUES
-(03034572, 'John', 'Doe'),
-(03032583, 'Bernell', 'Deamon'),
-(03032679, 'Jane', 'Smith'),
-(03062173, 'Jichael', 'Mohnson'),
-(03024769, 'Davion', 'Mitchell'),
-(03018590, 'Ava', 'Phillips'),
-(03013847, 'Noah', 'Kelly'),
-(03056739, 'Kendrick', 'Carter'),
-(03057602, 'Edward', 'Reese'),
-(03032571, 'Evan', 'Ibhawoa');
+('@03034572', 'John', 'Doe'),
+('@03032583', 'Bernell', 'Deamon'),
+('@03032679', 'Jane', 'Smith'),
+('@03062173', 'Jichael', 'Mohnson'),
+('@03024769', 'Davion', 'Mitchell'),
+('@03018590', 'Ava', 'Phillips'),
+('@03013847', 'Noah', 'Kelly'),
+('@03056739', 'Kendrick', 'Carter'),
+('@03057602', 'Edward', 'Reese'),
+('@03032571', 'Evan', 'Ibhawoa');
 
 INSERT INTO Grades (student_id, course_id, assignment_name, score) VALUES
-(03034572, 14216, 'Homework 1', 90),
-(03032583, 14216, 'Homework 1', 100),
-(03032679, 14216, 'Homework 1', 88),
-(03034576, 17814, 'Homework 1', 62),
-(03032679, 14150, 'Midterm Exam', 70),
-(03062173, 14150, 'Midterm Exam', 70),
-(03024769, 14150, 'Midterm Exam', 77),
-(03018590, 14150, 'Midterm Exam', 64),
-(03013847, 14150, 'Midterm Exam', 80),
-(03034572, 14150, 'Midterm Exam', 80),
-(03056739, 17814, 'Quiz 1', 60),
-(03057602, 17814, 'Quiz 1', 100),
-(03032571, 17814, 'Quiz 1', 80),
-(03034576, 17814, 'Quiz 1', 20),
-(03034572, 17814, 'Quiz 1', 80),
-(03013847, 14150, 'Quiz 1', 100);
+('@03034572', 14216, 'Homework 1', 90),
+('@03032583', 14216, 'Homework 1', 100),
+('@03032679', 14216, 'Homework 1', 88),
+('@03034576', 17814, 'Homework 1', 62),
+('@03032679', 14150, 'Midterm Exam', 70),
+('@03062173', 14150, 'Midterm Exam', 70),
+('@03024769', 14150, 'Midterm Exam', 77),
+('@03018590', 14150, 'Midterm Exam', 64),
+('@03013847', 14150, 'Midterm Exam', 80),
+('@03034572', 14150, 'Midterm Exam', 80),
+('@03056739', 17814, 'Quiz 1', 60),
+('@03057602', 17814, 'Quiz 1', 100),
+('@03032571', 17814, 'Quiz 1', 80),
+('@03034576', 17814, 'Quiz 1', 20),
+('@03034572', 17814, 'Quiz 1', 80),
+('@03013847', 14150, 'Quiz 1', 100);
 
 DESCRIBE Courses;
 DESCRIBE Assignments;
 DESCRIBE Students;
 DESCRIBE Grades;
+
+SELECT * FROM Courses;
+SELECT * FROM Assignments;
+SELECT * FROM Students;
+SELECT * FROM Grades;
