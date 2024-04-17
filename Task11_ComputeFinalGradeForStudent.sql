@@ -32,4 +32,5 @@ BEGIN
 END //
 
 DELIMITER ;
-CALL ComputeFinalGradeForStudent('@03034572', 14216);
+
+CALL ComputeFinalGradeForStudent('@03034572', 14216); -- Replace Student ID and Course ID
